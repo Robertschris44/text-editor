@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'text-editor'
+        title: 'J.A.T.E'
       }),
 
       new InjectManifest({
@@ -31,7 +31,7 @@ module.exports = () => {
         fingerprints: false,
         inject: true,
         name: 'text-editor',
-        short_name: 'JATE',
+        short_name: 'J.A.T.E',
         description: 'Text editing application',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
@@ -39,7 +39,7 @@ module.exports = () => {
         publicPath: '/',
         icons: [
           {
-            src: path.resolve('src/images/icon-manifest.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
