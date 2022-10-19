@@ -48,9 +48,24 @@ module.exports = () => {
       
     ],
 
+    //css loader from module 3
     module: {
       rules: [
-        
+        {
+          test:/\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presents: ['@babel/present-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transfrom-runtime'],
+            },
+          },
+        },
       ],
     },
   };
