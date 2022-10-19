@@ -61,7 +61,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presents: ['@babel/present-env'],
+              presets: ['@babel/present-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transfrom-runtime'],
             },
           },
